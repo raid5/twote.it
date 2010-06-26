@@ -1,4 +1,13 @@
 TwoteIt::Application.routes.draw do |map|
+  
+  resources :quotes do
+     member do
+       get :random
+     end 
+  end
+  
+  root :to => "quotes#random"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

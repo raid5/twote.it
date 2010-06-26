@@ -1,0 +1,13 @@
+<h1>Quotes</h1>
+
+<% @quotes.each do |quote| %>
+<p>
+  <% unless quote.author.empty? %>
+  By <%= quote.author %><br />
+  <% else %>
+  By Unknown<br />
+  <% end %>
+
+  <em>&ldquo;<%= quote.quote %>&rdquo;</em>
+</p>
+<% end %>

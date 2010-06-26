@@ -1,0 +1,7 @@
+<h1>Random Quote</h1>
+
+<% unless @quote.author.empty? %>
+By <%= @quote.author %><br />
+<% end %>
+
+<em>&ldquo;<%= @quote.quote %>&rdquo;</em>
