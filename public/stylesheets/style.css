@@ -1,0 +1,106 @@
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 14px;
+  color: #666666;
+  background-color: #a2ccfc;
+}
+
+div#sun {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-image:url('/images/sun.png');
+  width:166px;
+  height:148px;
+}
+
+div#clouds {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background-image:url('/images/clouds.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 293px;
+}
+
+div#grass {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  background-image:url('/images/grass.png');
+  width: 100%;
+  height: 211px;
+}
+
+div#container {
+  width: 900px;
+  margin-left: -450px;
+  left: 50%;
+  position: absolute;
+  z-index: 8;
+  top: 0;
+}
+
+div#masthead {
+  text-align:right;
+  padding-bottom: 50px;
+}
+
+div#header {
+  text-align:center;
+  padding: 20px 40px;
+}
+
+div#quote-top {
+  background-image:url('/images/quote-top.png');
+  width: 438px;
+  height: 37px;
+}
+
+div#quote {
+  background-color: #fff;
+  width: 398px;
+  padding: 0px 20px;
+  color: #666666;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  padding: 0px 20px;
+}
+
+div#quote-container {
+  width: 418px;
+  margin-left: 170px;
+  padding: 10px;
+}
+
+div#quote-bottom {
+  background-image:url('/images/quote-bottom.png');
+  width: 438px;
+  height: 37px;
+}
+
+div#footer {
+  position: absolute;
+  bottom: 20;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  z-index: 1;
+  color: #fff;
+  font-size: 12px;
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+}
+
+div#body {
+  width: 500px;
+  margin-left: 270px;
+}
+
+
+
