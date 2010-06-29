@@ -1,4 +1,6 @@
 class QuotesController < ApplicationController
+  respond_to :html, :js
+  
   def index
     @quotes = Quote.all
   end
@@ -8,7 +10,8 @@ class QuotesController < ApplicationController
   end
   
   def random
-    @quote = Quote.random
+    @quote_random = Quote.random
+    @quote = Quote.new
   end
 
   def new
@@ -20,7 +23,8 @@ class QuotesController < ApplicationController
     
     if @quote.save
       flash[:notice] = "Successfully added quote!"
-      redirect_to @quote
+      respond_with(@quote)
+      #redirect_to @quote
     else
       render :action => :new
     end

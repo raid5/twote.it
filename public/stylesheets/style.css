@@ -50,6 +50,11 @@ div#masthead {
   padding-bottom: 50px;
 }
 
+div#masthead img {
+  border: 0;
+  cursor: pointer;
+}
+
 div#header {
   text-align:center;
   padding: 20px 40px;
@@ -84,9 +89,20 @@ div#quote-bottom {
   height: 37px;
 }
 
+div#submitter {
+  position: relative;
+  top: 100px;
+  width:600px;
+  height:300px;
+  margin: auto;
+  border: 1px solid red;
+  background-color: #ccc;
+  z-index: 100;
+}
+
 div#footer {
   position: absolute;
-  bottom: 20;
+  bottom: 20px;
   left: 50%;
   margin-left: -150px;
   width: 300px;

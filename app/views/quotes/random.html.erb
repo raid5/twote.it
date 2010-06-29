@@ -1,7 +1,44 @@
-<h1>Random Quote</h1>
+<div id="container">
+  <div id="masthead">
+    <%= image_tag "submit-twote.png ", :id => "submit_image", :size => "127x30", :alt => "Submit Twote" %>
+    <!--img alt="Submit Twote" src="/images/submit-twote.png" width="127" height="30" border="0"-->
+  </div>
+  <div id="header">
+    <%= link_to root_path do %>
+      <img alt="Twote It" src="/images/header.png" width="510" height="56" border="0">
+    <% end %>
+    <br><br>
+    Having trouble finding a cool quote to share on Twitter? Why not twote it? Click on "Twote it!" to share the quote on screen and we'll push it on your Twitter page.
+    <br><br>
+  <div id="quote-container">  
+    <div id="quote-top"></div>
+    <div id="quote">
+      <img alt="" src="/images/quote-lt.png" width="" height="" border="0" style="display: block;">
+      <%= @quote_random.quote %>
+      <% unless @quote_random.author.empty? %>
+      <br><br>&mdash;<%= @quote_random.author %>
+      <% end %>
+      <img alt="" align="right" src="/images/quote-rt.png" width="" height="" border="0" style="display: block;">
+    </div>
+    <div id="quote-bottom"></div>  
+  </div>
+  </div>
+  <div id="body">
+    <div style="float: left; padding-right: 30px;">
+      <%= link_to "http://twitter.com/home?status=#{CGI::escape(@quote_random.quote + " - " + @quote_random.author)}" do %>
+      <img alt="Twote It!" src="/images/bt_twoteit.png" width="155" height="51" border="0">
+      <% end %>
+    </div>
+    <div style="float: left;">
+      <%= link_to root_path do %>
+      <img alt="How about a different one?" src="/images/bt_different.png" width="155" height="51" border="0">
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<% unless @quote.author.empty? %>
-By <%= @quote.author %><br />
-<% end %>
+<div id="submitter" style="display: none;">
+  <%= render 'form_remote' %>
 
-<em>&ldquo;<%= @quote.quote %>&rdquo;</em>
+  <%= link_to_function "Cancel", "hide_submitter()" %>
+</div>
