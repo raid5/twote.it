@@ -72,7 +72,7 @@ div#quote {
   padding: 0px 20px;
   color: #666666;
   font-family: helvetica, arial, sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
   padding: 0px 20px;
 }
@@ -127,6 +127,14 @@ div#footer {
   font-size: 12px;
   font-family: helvetica, arial, sans-serif;
   text-align: center;
+}
+
+div#quote-count {
+  width: 30px;
+  padding: 5px;
+  background-color: #e7e7e7;
+  color: #232323;
+  border: 1px solid #ababab;
 }
 
 div#body {
