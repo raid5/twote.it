@@ -38,7 +38,8 @@
 </div>
 
 <div id="submitter" style="display: none;">
-  <%= render 'form_remote' %>
+  <h2>SUBMIT A TWOTE!</h2>
+  <div id="submit-fields"><%= render 'form_remote' %></div>
 
-  <%= link_to_function "Cancel", "hide_submitter()" %>
+  <div id="field-author"><%= link_to_function "Cancel", "hide_submitter()" %></div>
 </div>

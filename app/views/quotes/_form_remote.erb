@@ -1,14 +1,14 @@
 <%= form_for(@quote, :remote => true) do |f| %>
   <%= render "shared/error_messages", :target => @quote %>
 
-  <div class="field">
+  <div class="area">
     <%= f.label :quote %><br />
-    <%= f.text_field :quote %>
+    <%= f.text_area :quote, :class => 'area_quote' %>
   </div>
 
   <div class="field">
     <%= f.label :author %><br />
-    <%= f.text_field :author %>
+    <%= f.text_field :author, :class => 'field_author' %>
   </div>
 
   <div class="actions">

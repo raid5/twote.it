@@ -92,12 +92,28 @@ div#quote-bottom {
 div#submitter {
   position: relative;
   top: 100px;
-  width:600px;
-  height:300px;
+  width:560px;
+  height:350px;
   margin: auto;
-  border: 1px solid red;
-  background-color: #ccc;
+  border: 2px solid #d2bd07;
+  background-color: #fffea6;
   z-index: 100;
+  padding: 0px 20px 20px 20px;
+  background-image:url('/images/bg-submitter.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+div#submit-fields {
+  text-align: left;
+  font-size: 18px;
+  color: #666666;
+  font-family: 'arial black';
+  height: 250px;
+}
+
+div#field-author {
+  color: #000;
 }
 
 div#footer {
@@ -118,5 +134,16 @@ div#body {
   margin-left: 270px;
 }
 
+.area_quote {
+  height: 130px;
+  width: 500px;
+  vertical-align: top;
+}
+
+.field_author {
+  height: 20px;
+  width: 200px;
+  vertical-align: top;
+}
 
 
