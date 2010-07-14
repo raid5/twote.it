@@ -41,9 +41,9 @@ document.observe("dom:loaded", function() {
 });
 
 function show_submitter() {
-  $('submitter').show();
+  $('submitter').appear();
 }
 
 function hide_submitter() {
-  $('submitter').hide();
+  $('submitter').fade();
 }
