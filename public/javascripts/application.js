@@ -1,4 +1,6 @@
 document.observe("dom:loaded", function() {
+  
+  $('quote-container').appear();
 
   $('submit_image').observe("click", show_submitter);
   
