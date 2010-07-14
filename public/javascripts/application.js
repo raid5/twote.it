@@ -2,6 +2,11 @@ document.observe("dom:loaded", function() {
 
   $('submit_image').observe("click", show_submitter);
   
+  Event.observe(document, 'keypress', function(evt) {
+    if (evt.keyCode == 27 && $('submitter').visible()) {
+      hide_submitter();
+    }
+  });
   
   new Form.Element.Observer('quote_quote', 0.2, function(el, value) {
     var len = $('quote_quote').value.length + $('quote_author').value.length;
