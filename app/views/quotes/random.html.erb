@@ -10,20 +10,22 @@
     <br><br>
     Having trouble finding a cool quote to share on Twitter? Why not twote it? Click on "Twote it!" to share the quote on screen and we'll push it on your Twitter page.
     <br><br>
-  <div id="quote-container" style="display: none;">  
-    <div id="quote-top"></div>
-    <div id="quote">
-      <img alt="" src="/images/quote-lt.png" width="" height="" border="0" style="display: block;">
-      <%= @quote_random.quote %>
-      <% unless @quote_random.author.empty? %>
-      <br><br>&mdash;<%= @quote_random.author %>
-      <% end %>
-      <img alt="" align="right" src="/images/quote-rt.png" width="" height="" border="0" style="display: block;">
+  <div style="min-height:200px;">
+    <div id="quote-container" style="display: none;">  
+      <div id="quote-top"></div>
+      <div id="quote">
+        <img alt="" src="/images/quote-lt.png" width="" height="" border="0" style="display: block;">
+        <%= @quote_random.quote %>
+        <% unless @quote_random.author.empty? %>
+        <br><br>&mdash;<%= @quote_random.author %>
+        <% end %>
+        <img alt="" align="right" src="/images/quote-rt.png" width="" height="" border="0" style="display: block;">
+      </div>
+      <div id="quote-bottom"></div>  
     </div>
-    <div id="quote-bottom"></div>  
+    </div>
   </div>
-  </div>
-  <div id="body" style="display: none;">
+  <div id="body">
     <div style="float: left; padding-right: 30px;">
       <%= link_to "http://twitter.com/home?status=#{CGI::escape(@quote_random.quote + " - " + @quote_random.author)}" do %>
       <img alt="Twote It!" src="/images/bt_twoteit.png" width="155" height="51" border="0">
