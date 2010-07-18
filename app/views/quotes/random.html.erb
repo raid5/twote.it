@@ -7,8 +7,8 @@
     <%= link_to root_path do %>
       <img alt="Twote It" src="/images/header.png" width="510" height="56" border="0">
     <% end %>
-    <i><h2>Inspiration in 140 characters</h2></i><br><br>
-    Having trouble finding a cool quote to share on Twitter? Why not twote it? Click on "Twote it!" to share the quote on screen and we'll push it on your Twitter page.
+    <i><h2>Inspiration in 140 characters</h2></i>
+    Having trouble finding a cool quote to share on Twitter? Why not twote it?<br>Click "Twote it!" to share the quote on screen and we'll push it on your Twitter page.
     <br>
   <div style="min-height:200px;">
     <div id="quote-container" style="display: none;">  
@@ -43,5 +43,4 @@
   <span style="font-size:24px; font-family: 'arial black', arial; color:#00165e;">SUBMIT A TWOTE!</span>
   <div id="submit-fields"><%= render 'form_remote' %></div>
   <div id="quote-count">140</div>
-  <div id="field-author"><%= link_to_function "Cancel", "hide_submitter()" %></div>
 </div>
