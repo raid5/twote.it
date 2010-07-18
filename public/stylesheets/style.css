@@ -47,7 +47,7 @@ div#container {
 
 div#masthead {
   text-align:right;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 }
 
 div#masthead img {
@@ -95,10 +95,10 @@ div#submitter {
   width:560px;
   height:350px;
   margin: auto;
-  border: 2px solid #d2bd07;
-  background-color: #fffea6;
+  border: 2px solid #0a385b;
+  background-color: #eff7fd;
   z-index: 100;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px 0px 20px;
   background-image:url('/images/bg-submitter.png');
   background-position: bottom;
   background-repeat: no-repeat;
@@ -108,7 +108,7 @@ div#submit-fields {
   text-align: left;
   font-size: 18px;
   color: #666666;
-  font-family: 'arial black';
+  font-family: helvetica, arial, sans-serif;
   height: 250px;
 }
 
@@ -154,4 +154,15 @@ div#body {
   vertical-align: top;
 }
 
+.field {
+  color: #000;
+  font-size: 18px;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.area {
+  color: #000;
+  font-size: 18px;
+  font-family: helvetica, arial, sans-serif;
+}
 

@@ -11,7 +11,7 @@
     <%= f.text_field :author, :class => 'field_author' %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" style="padding:10px 0px;">
+    <div style="padding-right:5px; float:left;"><%= image_submit_tag('bt_submit.png') %></div><div><%= link_to_function image_tag('bt_cancel.png', :border =>0), "hide_submitter()" %></div>
   </div>
 <% end %>
