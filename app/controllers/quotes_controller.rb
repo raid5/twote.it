@@ -1,6 +1,8 @@
 class QuotesController < ApplicationController
   respond_to :html, :js
   
+  before_filter :authenticate, :only => [:edit, :update, :destroy]
+  
   def index
     @quotes = Quote.all
   end
@@ -44,4 +46,16 @@ class QuotesController < ApplicationController
       render :action => :edit
     end
   end
+  
+  def destroy
+  end
+  
+  protected
+  
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      (username == "adam" && password == "wttkomm") || (username == "david" && password == "seavulture")
+    end
+  end
+  
 end
