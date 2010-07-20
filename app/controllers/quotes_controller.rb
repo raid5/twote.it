@@ -1,10 +1,23 @@
 class QuotesController < ApplicationController
   respond_to :html, :js
   
-  before_filter :authenticate, :only => [:edit, :update, :destroy]
+  before_filter :authenticate, :only => [:pending, :approve, :edit, :update, :destroy]
   
   def index
     @quotes = Quote.all
+  end
+  
+  def pending
+    @quotes = Quote.pending
+    
+    render :layout => 'clean'
+  end
+  
+  def approve
+    @quote = Quote.find(params[:id])
+    @quote.update_attribute(:approved, true)
+    
+    redirect_to :action => 'pending'
   end
   
   def show
@@ -12,7 +25,7 @@ class QuotesController < ApplicationController
   end
   
   def random
-    @quote_random = Quote.random
+    @quote_random = Quote.approved.random
     @quote = Quote.new
   end
 
@@ -48,6 +61,9 @@ class QuotesController < ApplicationController
   end
   
   def destroy
+    @quote = Quote.find(params[:id])
+    @quote.destroy
+    redirect_to :action => 'pending'
   end
   
   protected

@@ -1,9 +1,12 @@
 TwoteIt::Application.routes.draw do |map|
   
   resources :quotes do
-     member do
-       get :random
-     end 
+    member do
+      get :approve
+    end
+    collection do
+      get :pending
+    end
   end
   
   root :to => "quotes#random"
