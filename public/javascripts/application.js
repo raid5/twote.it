@@ -40,12 +40,25 @@ document.observe("dom:loaded", function() {
     $('quote-count').update(140 - len);
   });
   
+  // Observe form submission
+  Event.observe('new_quote', 'submit', function(e) {
+    if ($('quote_quote').value.length == 0) {
+      e.stop();
+      
+      $('quote-count').insert({
+        'after' : '<div id="flash_error">Quote is required.</div>'
+      });
+    }
+  });
+  
 });
 
 function show_submitter() {
-  $('submitter').appear();
+  $('overlay').appear({ duration: 0.7 });
+  $('submitter').appear({ duration: 0.7 });
 }
 
 function hide_submitter() {
-  $('submitter').fade();
+  $('overlay').fade({ duration: 0.7 });
+  $('submitter').fade({ duration: 0.7 });
 }
