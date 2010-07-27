@@ -4,7 +4,7 @@ class QuotesController < ApplicationController
   before_filter :authenticate, :only => [:pending, :approve, :edit, :update, :destroy]
   
   def index
-    @quotes = Quote.all
+    @quotes = Quote.approved
   end
   
   def pending
