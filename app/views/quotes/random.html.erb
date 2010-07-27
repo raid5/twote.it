@@ -31,7 +31,7 @@
   <div id="body">
     <div style="float: left; padding-right: 30px;">
       <% if @quote_random %>
-        <%= link_to "http://twitter.com/home?status=#{CGI::escape(@quote_random.quote + " - " + @quote_random.author)}" do %>
+        <%= link_to "http://twitter.com/home?status=#{CGI::escape("\"" + @quote_random.quote + "\" - " + @quote_random.author)}" do %>
         <img alt="Twote It!" src="/images/bt_twoteit.png" width="155" height="51" border="0">
         <% end %>
       <% end %>
