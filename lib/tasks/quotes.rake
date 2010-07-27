@@ -1,7 +1,7 @@
 require 'csv'
 
 namespace :quotes do
-  desc "Import quotes from /config/quotes/quotes.csv."
+  desc "Import quotes from /config/quotes/quotes.csv"
   task :import => :environment do
     quotes_csv = Rails.root.join('config/quotes/quotes.csv')
     
