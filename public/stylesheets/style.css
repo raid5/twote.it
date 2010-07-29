@@ -83,13 +83,14 @@ div#quote {
   font-family: helvetica, arial, sans-serif;
   font-size: 16px;
   text-align: center;
-  padding: 0px 20px;
 }
 
 div#quote-container {
-  width: 418px;
-  margin-left: 170px;
-  padding: 10px;
+  position: absolute;
+  width: 468px;
+  margin-left: -234px;
+  left: 50%;
+  padding-top: 20px;
 }
 
 div#quote-bottom {
