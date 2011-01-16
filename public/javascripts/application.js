@@ -22,7 +22,7 @@ document.observe("dom:loaded", function() {
     
     len = $('quote_quote').value.length + $('quote_author').value.length;
     
-    $('quote-count').update(140 - len);
+    $('quote_count').update(140 - len);
   });
   
   new Form.Element.Observer('quote_author', 0.2, function(el, value) {
@@ -37,7 +37,7 @@ document.observe("dom:loaded", function() {
     
     len = $('quote_quote').value.length + $('quote_author').value.length;
     
-    $('quote-count').update(140 - len);
+    $('quote_count').update(140 - len);
   });
   
   // Observe form submission

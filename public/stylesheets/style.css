@@ -14,16 +14,6 @@ div#overlay {
   background: rgba(0, 0, 0, 0.2);
 }
 
-div#sun {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-image:url('/images/sun.png');
-  width:166px;
-  height:148px;
-}
-
 div#clouds {
   position: absolute;
   z-index: 0;
@@ -64,7 +54,7 @@ div#masthead img {
   cursor: pointer;
 }
 
-div#header {
+#header {
   text-align:center;
   padding: 20px 40px;
 }
@@ -75,13 +65,13 @@ div#quote-top {
   height: 37px;
 }
 
-div#quote {
+#quote {
   background-color: #fff;
   width: 398px;
   padding: 0px 20px;
-  color: #666666;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 16px;
+  color: #ababab;
+  font-family: georgia, 'lucida grande', helvetica, arial, sans-serif;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -99,19 +89,82 @@ div#quote-bottom {
   height: 37px;
 }
 
+
+/*Masthead*/
+#login {
+  float: right;
+  padding: 5px 20px 0px 0px;
+}
+
+#submit-twote {
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+
+/*Submitter*/
 div#submitter {
   position: relative;
   top: 100px;
-  width:560px;
-  height:350px;
+  width: 560px;
+  height: 380px;
   margin: auto;
-  border: 2px solid #0a385b;
-  background-color: #eff7fd;
   z-index: 100;
-  padding: 0px 20px 0px 20px;
-  background-image:url('/images/bg-submitter.png');
+  padding: 30px 35px;
   background-position: bottom;
   background-repeat: no-repeat;
+  background-image: url('/images/bg-submitter.png');
+}
+
+#quote_count {
+  width: 30px;
+  margin-top: 10px;
+  padding: 2px 5px;
+  background-color: #e7e7e7;
+  border: 1px solid #ababab;
+  float: left;
+  font-size: 16px;
+  color: #666666;
+}
+
+#quote_quote {
+  height: 145px;
+  width: 550px;
+  background-image: url('/images/bg-quote.jpg');
+  background-repeat: no-repeat;
+  border: 1px solid #ababab;
+  font-size: 16px;
+  color: #666666;
+  padding: 5px;
+  font-family: 'lucida grande', helvetica, arial, sans-serif;
+}
+.submit{
+  font-size: 30px;
+  font-family: 'lucida grande', helvetica, arial, sans-serif;
+  color: #666;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.area {
+  font-size: 14px;
+  color: #666666;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'lucida grande', arial, helvetica, sans-serif;
+}
+
+#quote_author {
+  height: 20px;
+  padding: 5px;
+  font-size: 16px;
+  color: #666666;
+  border: 1px solid #ababab;
+  background-image: url('/images/bg-author.jpg');
+  background-repeat: repeat-x;
+  font-family: 'lucida grande', helvetica, arial, sans-serif;
 }
 
 div#submit-fields {
@@ -139,12 +192,9 @@ div#footer {
   text-align: center;
 }
 
-div#quote-count {
-  width: 30px;
-  padding: 5px;
-  background-color: #e7e7e7;
-  color: #232323;
-  border: 1px solid #ababab;
+#character_count {
+  padding: 12px 10px;
+  float: left;
 }
 
 div#body {
@@ -165,12 +215,6 @@ div#body {
 }
 
 .field {
-  color: #000;
-  font-size: 18px;
-  font-family: helvetica, arial, sans-serif;
-}
-
-.area {
   color: #000;
   font-size: 18px;
   font-family: helvetica, arial, sans-serif;

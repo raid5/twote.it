@@ -1,16 +1,14 @@
 <div id="overlay" style="display: none;"></div>
 <div id="container">
   <div id="masthead">
-    <%= image_tag "submit-twote.png ", :id => "submit_image", :size => "127x30", :alt => "Submit Twote" %>
-    <!--img alt="Submit Twote" src="/images/submit-twote.png" width="127" height="30" border="0"-->
+    <div id="submit-twote"><%= image_tag "submit-twote.png ", :id => "submit_image", :size => "127x30", :alt => "Submit Twote" %><!--img alt="Submit Twote" src="/images/submit-twote.png" width="127" height="30" border="0"--></div>
+    <div id="login">Login</div>
+    <div class="clear"></div>
   </div>
   <div id="header">
     <%= link_to root_path do %>
-      <img alt="Twote It" src="/images/header.png" width="510" height="56" border="0">
+      <img alt="Twote It" src="/images/header.png" width="510" height="100" border="0">
     <% end %>
-    <i><h2>Inspiration in 140 characters</h2></i>
-    Having trouble finding a cool quote to share on Twitter? Why not twote it?<br>Click "Twote it!" to share the quote on screen and we'll push it on your Twitter page.
-    <br>
   <div style="min-height:200px;">
     <div id="quote-container" style="display: none;">  
       <div id="quote-top"></div>
@@ -45,7 +43,7 @@
 </div>
 
 <div id="submitter" style="display: none;">
-  <span style="font-size:24px; font-family: 'arial black', arial; color:#00165e;">SUBMIT A TWOTE!</span>
+  <span class="submit">Submit a Twote</span><br><br>
   <div id="submit-fields"><%= render 'form_remote' %></div>
-  <div id="quote-count">140</div>
+  
 </div>

@@ -2,16 +2,17 @@
   <%= render "shared/error_messages", :target => @quote %>
 
   <div class="area">
-    <%= f.label :quote %><br />
+    <%= f.label :quote, nil, :class => 'area' %><br />
     <%= f.text_area :quote, :class => 'area_quote' %>
   </div>
 
   <div class="field">
-    <%= f.label :author %><br />
+    <%= f.label :author, nil, :class => 'area' %><br />
     <%= f.text_field :author, :class => 'field_author' %>
   </div>
 
-  <div class="actions" style="padding:10px 0px;">
-    <div style="padding-right:5px; float:left;"><%= image_submit_tag('bt_submit.png') %></div><div><%= link_to_function image_tag('bt_cancel.png', :border =>0), "hide_submitter()" %></div>
+  <div class="actions" style="padding: 10px 0px 5px 0px;">
+    <div style="padding-right: 20px;float:left;"><%= image_submit_tag('bt_submit.png') %></div><div><%= link_to_function image_tag('bt_cancel.png', :border =>0), "hide_submitter()" %></div>
+    <div id="quote_count">140</div><div id="character_count">characters remaining</div>
   </div>
 <% end %>
