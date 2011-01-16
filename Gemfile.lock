@@ -82,7 +82,6 @@ GEM
       oa-enterprise (= 0.1.6)
       oa-oauth (= 0.1.6)
       oa-openid (= 0.1.6)
-    pg (0.10.0)
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.2)
     rack (1.2.1)
@@ -128,7 +127,6 @@ PLATFORMS
 
 DEPENDENCIES
   omniauth
-  pg
   rails (= 3.0.3)
   sqlite3-ruby
   twitter_oauth
