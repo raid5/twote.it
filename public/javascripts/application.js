@@ -4,6 +4,11 @@ document.observe("dom:loaded", function() {
 
   $('submit_image').observe("click", show_submitter);
   
+  $('closer').observe("click", function(event) {
+    event.stop();
+    $('note').fade({ duration: 0.3 });
+  });
+  
   Event.observe(document, 'keypress', function(evt) {
     if (evt.keyCode == 27 && $('submitter').visible()) {
       hide_submitter();
@@ -54,11 +59,11 @@ document.observe("dom:loaded", function() {
 });
 
 function show_submitter() {
-  $('overlay').appear({ duration: 0.7 });
-  $('submitter').appear({ duration: 0.7 });
+  $('overlay').appear({ duration: 0.3 });
+  $('submitter').appear({ duration: 0.3 });
 }
 
 function hide_submitter() {
-  $('overlay').fade({ duration: 0.7 });
-  $('submitter').fade({ duration: 0.7 });
+  $('overlay').fade({ duration: 0.3 });
+  $('submitter').fade({ duration: 0.3 });
 }

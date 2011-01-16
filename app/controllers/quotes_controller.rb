@@ -34,6 +34,9 @@ class QuotesController < ApplicationController
   end
   
   def create
+    # Strip quotation marks
+    params[:quote][:quote].gsub!(/\"/, "")
+    
     @quote = Quote.new(params[:quote])
     
     if @quote.save
