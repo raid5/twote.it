@@ -147,14 +147,14 @@ div#quote-bottom {
 
 /*Submitter*/
 div#submitter {
-  position: relative;
+  position: absolute;
   top: 100px;
   width: 560px;
   height: 380px;
-  margin: auto;
+  left: 50%;
+  margin-left: -280px;
   z-index: 100;
   padding: 30px 35px;
-  background-position: bottom;
   background-repeat: no-repeat;
   background-image: url('/images/bg-submitter.png');
 }
