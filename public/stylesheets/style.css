@@ -75,6 +75,10 @@ div#quote-top {
   height: 37px;
 }
 
+div#authentication {
+  text-align: center;
+}
+
 div#quote {
   background-color: #fff;
   width: 398px;

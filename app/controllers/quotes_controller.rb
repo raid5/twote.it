@@ -66,6 +66,19 @@ class QuotesController < ApplicationController
     redirect_to :action => 'pending'
   end
   
+  def tweet
+    client = TwitterOAuth::Client.new(
+      :consumer_key => 'CdZJm57GaoLFJR6VvHwfKg',
+      :consumer_secret => 'OzleIiC66P9lTaBZJP9Ug7TZXVlohp72bDQmX9fMOg',
+      :token => current_user.token, 
+      :secret => current_user.secret
+    )
+    
+    client.update(params[:quote])
+    
+    respond_with({:success => "true"}.to_json)
+  end
+  
   protected
   
   def authenticate
