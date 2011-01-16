@@ -5,6 +5,16 @@
     <div id="login">Login</div>
     <div class="clear"></div>
   </div>
+  
+  <div id="authentication">
+    <% if current_user %>
+      Welcome, <%= current_user.name %>!
+      <%= link_to "Sign Out", signout_path %>
+    <% else %>
+      <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+    <% end %>
+  </div>
+  
   <div id="header">
     <%= link_to root_path do %>
       <img alt="Twote It" src="/images/header.png" width="510" height="100" border="0">
@@ -29,9 +39,7 @@
   <div id="body">
     <div style="float: left; padding-right: 30px;">
       <% if @quote_random %>
-        <%= link_to "http://twitter.com/home?status=#{CGI::escape("\"" + @quote_random.quote + "\" - " + @quote_random.author)}" do %>
-        <img alt="Twote It!" src="/images/bt_twoteit.png" width="155" height="51" border="0">
-        <% end %>
+        <%= render 'tweet_form_remote' %>
       <% end %>
     </div>
     <div style="float: left;">
