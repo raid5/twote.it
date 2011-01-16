@@ -1,51 +1,48 @@
 <div id="overlay" style="display: none;"></div>
-<div id="container">
+<div id="note"><div id="note-message">
+  <div id="welcome"><b>Welcome to Twote.it!</b> Sign in to your Twitter account to easily post (twote) inspirational quotes with a single click.</div>
+  <div id="close"><%= link_to "Close X", "#", :class => 'white' %></div>
+</div></div>
+<div id="container">  
   <div id="masthead">
     <div id="submit-twote"><%= image_tag "submit-twote.png ", :id => "submit_image", :size => "127x30", :alt => "Submit Twote" %><!--img alt="Submit Twote" src="/images/submit-twote.png" width="127" height="30" border="0"--></div>
-    <div id="login">Login</div>
-    <div class="clear"></div>
-  </div>
-  
-  <div id="authentication">
-    <% if current_user %>
+    <div id="login"><% if current_user %>
       Welcome, <%= current_user.name %>!
       <%= link_to "Sign Out", signout_path %>
     <% else %>
       <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-    <% end %>
+    <% end %></div>
+    <div class="clear"></div>
   </div>
-  
   <div id="header">
     <%= link_to root_path do %>
       <img alt="Twote It" src="/images/header.png" width="510" height="100" border="0">
     <% end %>
-  <div style="min-height:200px;">
+  </div>
+  <div id="quote_block">
     <div id="quote-container" style="display: none;">  
       <div id="quote-top"></div>
       <div id="quote">
-        <img alt="" src="/images/quote-lt.png" width="" height="" border="0" style="display: block;">
         <% if @quote_random %>
           <%= @quote_random.quote %>
           <% unless @quote_random.author.empty? %>
           <br><br>&mdash;<%= @quote_random.author %>
           <% end %>
-        <% end %>
-        <img alt="" align="right" src="/images/quote-rt.png" width="" height="" border="0" style="display: block;">
+        <% end %>          
       </div>
-      <div id="quote-bottom"></div>  
-    </div>
+      <div id="quote-bottom"></div>
     </div>
   </div>
-  <div id="body">
+  <div id="buttons">
     <div style="float: left; padding-right: 30px;">
-      <% if @quote_random %>
-        <%= render 'tweet_form_remote' %>
-      <% end %>
+    <% if @quote_random %>
+      <%= render 'tweet_form_remote' %>
+    <% end %>
     </div>
     <div style="float: left;">
-      <%= link_to root_path do %>
-      <img alt="How about a different one?" src="/images/bt_different.png" width="155" height="51" border="0">
-      <% end %>
+    <%= link_to root_path do %>
+    <img alt="How about a different one?" src="/images/bt_different.png" width="155" height="51" border="0">
+    <% end %>
     </div>
   </div>
 </div>

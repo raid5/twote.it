@@ -3,6 +3,41 @@ body {
   font-size: 14px;
   color: #666666;
   background-color: #a2ccfc;
+  margin: 0;
+  padding: 0;
+}
+
+.white {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+
+#note {
+  background-color: #7d0000;
+  height: 17px;
+  z-index: 10;
+  border-bottom: 1px solid #333;
+  padding: 7px 10px;
+  color: #f8f8f8;
+  text-align: center;
+  background-image: url('/images/bg-note.jpg');
+  background-repeat: repeat-x;
+}
+
+#note-message {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  font-size: 12px;
+}
+
+#welcome {
+  float: left;
+}
+
+#close {
+  float: right;
 }
 
 div#overlay {
@@ -12,17 +47,6 @@ div#overlay {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-}
-
-div#clouds {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  background-image:url('/images/clouds.png');
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 293px;
 }
 
 div#grass {
@@ -37,11 +61,11 @@ div#grass {
 
 div#container {
   width: 900px;
-  margin-left: -450px;
-  left: 50%;
-  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 8;
   top: 0;
+  clear: both;
 }
 
 div#masthead {
@@ -63,6 +87,8 @@ div#quote-top {
   background-image:url('/images/quote-top.png');
   width: 438px;
   height: 37px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div#authentication {
@@ -77,20 +103,36 @@ div#authentication {
   font-family: georgia, 'lucida grande', helvetica, arial, sans-serif;
   font-size: 20px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-div#quote-container {
-  position: absolute;
-  width: 468px;
-  margin-left: -234px;
-  left: 50%;
-  padding-top: 20px;
+#quote_block {
+  min-height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#buttons {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 345px;
+}
+
+#quote-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div#quote-bottom {
   background-image:url('/images/quote-bottom.png');
   width: 438px;
   height: 37px;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -199,11 +241,6 @@ div#footer {
 #character_count {
   padding: 12px 10px;
   float: left;
-}
-
-div#body {
-  width: 500px;
-  margin-left: 270px;
 }
 
 .area_quote {
