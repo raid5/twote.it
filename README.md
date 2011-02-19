@@ -1,7 +1,7 @@
 Twote.it - Inspiration in 140 characters
 ========
 
-Twote.it is a random quote generator of quotes submitted by users. Allowing users to easily push (twote) them to Twitter. 
+Twote.it is a random quote generator, pulling from quotes submitted by users. Allowing users to easily push (twote) them to Twitter. 
 
 You can find the live site at [http://twote.it](http://twote.it).
 
