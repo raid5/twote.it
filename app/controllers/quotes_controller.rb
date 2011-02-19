@@ -71,8 +71,8 @@ class QuotesController < ApplicationController
   
   def tweet
     client = TwitterOAuth::Client.new(
-      :consumer_key => 'CdZJm57GaoLFJR6VvHwfKg',
-      :consumer_secret => 'OzleIiC66P9lTaBZJP9Ug7TZXVlohp72bDQmX9fMOg',
+      :consumer_key => TW_CONFIG['consumer_key'],
+      :consumer_secret => TW_CONFIG['consumer_secret'],
       :token => current_user.token, 
       :secret => current_user.secret
     )
